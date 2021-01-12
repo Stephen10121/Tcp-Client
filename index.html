@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="grid">
+        <div class="header"></div>
+        <div class="main">
+            <center>
+                <form id="password-form" action="javascript: sendMsg()">
+                    <input type="text" id="ip" class="input" placeholder="Ip Address"><br>
+                    <input type="text" id="port" class="input" placeholder="Port Number"><br>
+                    <input type="password" id="password" class="input" placeholder="Password">
+                    <input type="Submit" value="Send">
+                </form>
+                <p id="output"></p>
+            </center>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
