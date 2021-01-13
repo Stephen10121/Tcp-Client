@@ -13,9 +13,10 @@
 }
 
 .lheader a img {
-    width: 50px;
     float: left;
+    width: 50px;
     margin: 10px;
+    right: 50px;
 }
 
 .rheader ul {
