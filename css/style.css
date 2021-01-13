@@ -1,0 +1,72 @@
+/*Page startup config*/
+* {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Header Config*/
+.header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 70px;
+    background-color: #f3f3f3;
+}
+
+.lheader a img {
+    width: 50px;
+    float: left;
+    margin: 10px;
+}
+
+.rheader ul {
+    float: right;
+    padding: 10px;
+}
+
+.rheader ul li{
+    display: inline;
+}
+
+.rheader ul li a{
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+/*Inputs Config*/
+input[type=text], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#password-form {
+    margin-top: 50px;
+}
