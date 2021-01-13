@@ -35,7 +35,13 @@
     text-transform: uppercase;
 }
 
+/*Config Settings*/
+
 /*Inputs Config*/
+#error {
+    color: red;
+}
+
 input[type=text], select {
     width: 70%;
     padding: 12px 20px;

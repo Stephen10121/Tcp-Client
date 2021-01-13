@@ -18,6 +18,7 @@ async function sendMsg() {
         Cookies.set("ip", ip, {expires: 30});
         Cookies.set("port", port, {expires: 30});
         Cookies.set("password", password, {expires: 30});
+        Cookies.set("isConfig", "true", {expires: 30});
         var myCookie = [Cookies.get("ip"), Cookies.get("port"), Cookies.get("password")]
         console.log(myCookie);
     }

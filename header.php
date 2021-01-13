@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <div class="grid">
         <div class="header">
             <div class="lheader">
@@ -22,6 +23,7 @@
                 <ul>
                     <li><a href="about.php">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
+                    <li><a href="function.php">Functions</a></li>
                     <li><a href="config.php">Configure</a></li>
                 </ul>
             </div>
