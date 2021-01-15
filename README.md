@@ -1,3 +1,2 @@
 # Tcp-Client
-A tcp client to control my arduino components.
-This project is under development so i didn't add a detailed explanation yet.
+This is a website that can be used to give command to another computer via Tcp/Ip communication. Simply type the ip and port of your tcp server then your connected.
