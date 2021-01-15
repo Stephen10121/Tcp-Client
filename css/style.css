@@ -36,7 +36,36 @@
     text-transform: uppercase;
 }
 
+/*Function Config*/
+
+#gerror {
+    color: green;
+    text-align: center;
+}
+
+.grid-function {
+    display: grid;
+    grid-template-rows: 90px 90px 90px;
+}
+
+.grid-function-1 {
+    display: grid;
+    grid-template-columns: 90px 90px 90px;
+    color: white;
+    margin: 5px;
+    width: 210px;
+}
+
+.grid-function-2 {
+    margin: 0 5px;
+    background-color: black;
+}
+
 /*Config Settings*/
+
+#info {
+    display: none;
+}
 
 /*Inputs Config*/
 #error {
@@ -74,6 +103,21 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=button] {
+    width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
     background-color: #45a049;
 }
 

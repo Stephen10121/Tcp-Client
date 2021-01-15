@@ -8,6 +8,12 @@ require_once 'header.php';
                     <input type="password" id="password" class="input" placeholder="Password">
                     <input type="Submit" value="Connect">
                 </form>
+                <div id="info">
+                    <br><p>Ip:</p>
+                    <p id="ipIp" style="display:block;">null</p><br>
+                    <p>Port:</p>
+                    <p id="portPort" style="display:block;">null</p>
+                </div>
                 <?php
                 if (isset($_GET['error'])) {
                     if ($_GET['error'] == "notconfig") {
@@ -15,7 +21,11 @@ require_once 'header.php';
                     }
                 }
                 ?>
+                <input type="button" style="display:none;" onclick="deleteConfig()" id="delConf" value="Delete Configuration">
                 <p id="output"></p>
+                <script>
+                    document.getElementById('ip').innerHTML="jeff";
+                </script>
             </center>
 <?php
 require_once 'footer.php';
