@@ -9,9 +9,14 @@ require_once 'header.php';
                         }
                     }
                 ?>
+                <form action="javascript: addFunc()">
+                    <input type="text" placeholder="New Func Name" id="funcName"/>
+                    <input type="text" placeholder="Funcion Id Send" id="funcId"/>
+                    <input type="submit" value="Make Function"/>
+                </form>
                 <div class="grid-function">
                     <div class="grid-function-1">
-                        <div class="grid-function-2">hey1</div>
+                        <div id="oneOne" class="grid-function-2"></div>
                         <div class="grid-function-2">hey2</div>
                         <div class="grid-function-2">hey3</div>
                     </div>
@@ -22,7 +27,7 @@ require_once 'header.php';
                     </div>
                     <div class="grid-function-1">
                         <div class="grid-function-2">hey7</div>
-                        <div class="grid-function-2">hey8</div>
+                        <div class="grid-function-2">hey8</div>0
                         <div class="grid-function-2">hey9</div>
                     </div>
                 </div>

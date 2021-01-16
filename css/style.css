@@ -45,12 +45,12 @@
 
 .grid-function {
     display: grid;
-    grid-template-rows: 90px 90px 90px;
+    grid-template-rows: 110px 110px 110px;
 }
 
 .grid-function-1 {
     display: grid;
-    grid-template-columns: 90px 90px 90px;
+    grid-template-columns: 110px 110px 110px;
     color: white;
     margin: 5px;
     width: 210px;

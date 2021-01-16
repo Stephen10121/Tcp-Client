@@ -1,5 +1,5 @@
 var good = 0;
-
+addFuncCookie();
 function writeInfo() {
     document.getElementById('ipIp').innerHTML = Cookies.get('ip');
     document.getElementById('portPort').innerHTML = Cookies.get('port');
@@ -60,4 +60,51 @@ function listen(ip, port, message) {
 }
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function addFunc() {
+    var funcName = document.getElementById("funcName").value;
+    var funcId = document.getElementById("funcId").value;
+    document.getElementById('oneOne').innerHTML = '<input type="submit" value="'+funcName+'"/>';
+    //window.location.replace("function.php");
+}
+
+function addFuncCookie() {
+    if (Cookies.get('oneOne') != null) {
+        if(Cookies.get('twoTwo') != null) {
+            if(Cookies.get('threeThree') != null) {
+                if(Cookies.get('fourFour') != null) {
+                    if(Cookies.get('fiveFive') != null) {
+                        if(Cookies.get('sixSix') != null) {
+                            if(Cookies.get('sevenSeven') != null) {
+                                if(Cookies.get('eightEight') != null) {
+                                    if(Cookies.get('nineNine') != null) {
+                                        //No space
+                                    } else {
+                                        //Make nine cookie
+                                    } else { 
+                                    //Make eight cookie
+                                }
+                            } else {
+                                //Make seven cookie
+                            }
+                        } else {
+                            //Make six cookie
+                        }
+                    } else {
+                        //Make five cookie
+                    }
+                } else {
+                    //Make fourFour cookie
+                }
+            } else {
+                //Make threeThree cookie
+            }
+        } else {
+            //Make twoTwo Cookie
+        }
+    } else {
+        //Make oneOne Cookie
+        console.log("Cookie one not there");
+    }
 }
