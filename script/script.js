@@ -31,11 +31,15 @@ if (Cookies.get("isConfig")) {
 if (Cookies.get("isConfig") == true) {
     document.getElementById('info').style.display = "none";
 }
-async function sendMsg() {
-    //Get Info
+
+function sendSetting() {
     var ip = document.getElementById("ip").value;
     var port = document.getElementById("port").value;
     var password = document.getElementById("password").value;
+    sendMsg(ip, port, password);
+}
+async function sendMsg(ip, port, password, message) {
+    //Get Info
 
     listen(ip, port, password);
     await sleep(100)
@@ -51,6 +55,12 @@ async function sendMsg() {
     }
 }
 
+async function sendMsgFinal(ip, port, password, message) {
+    var recieved = listen(ip, port, password+message);
+    await sleep(100);
+    //console.log(recieved);
+}
+
 function listen(ip, port, message) {
     socket = new WebSocket('ws://'+ip+':'+port);
 
@@ -62,7 +72,10 @@ function listen(ip, port, message) {
             good = 1;
         }
         console.log(event.data);
-        document.getElementById("output").innerHTML = event.data;
+        if ( document.URL.includes("config.php") ) {
+            document.getElementById("output").innerHTML = event.data;
+        }
+        return event.data;
     });
 }
 function sleep(ms) {
@@ -179,7 +192,33 @@ function loadFuncCookie() {
 document.getElementById("oneOne").onclick = function() {
     bro(Cookies.get("oneOneId"));
 };
+document.getElementById("twoTwo").onclick = function() {
+    bro(Cookies.get("twoTwoId"));
+};
+document.getElementById("threeThree").onclick = function() {
+    bro(Cookies.get("threeThreeId"));
+};
+document.getElementById("fourFour").onclick = function() {
+    bro(Cookies.get("fourFourId"));
+};
+document.getElementById("fiveFive").onclick = function() {
+    bro(Cookies.get("fiveFiveId"));
+};
+document.getElementById("sixSix").onclick = function() {
+    bro(Cookies.get("sixSixId"));
+};
+document.getElementById("sevenSeven").onclick = function() {
+    bro(Cookies.get("sevenSevenId"));
+};
+document.getElementById("eightEight").onclick = function() {
+    bro(Cookies.get("eightEightId"));
+};
+document.getElementById("nineNine").onclick = function() {
+    bro(Cookies.get("nineNineId"));
+};
 
 function bro(what) {
-    console.log(what);
+    //console.log(what);
+    what = what.toString()
+    sendMsgFinal("192.168.0.43", 5000, "test123", what);
 }

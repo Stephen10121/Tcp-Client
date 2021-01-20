@@ -2,7 +2,7 @@
 require_once 'header.php';
 ?>
             <center>
-                <form id="password-form" autocomplete="off" action="javascript: sendMsg()">
+                <form id="password-form" autocomplete="off" action="javascript: sendSetting()">
                     <input type="text" id="ip" class="input" autocomplete="off" placeholder="Ip Address"><br>
                     <input type="text" id="port" class="input" placeholder="Port Number"><br>
                     <input type="password" id="password" class="input" placeholder="Password">
