@@ -17,18 +17,18 @@ require_once 'header.php';
                 <div class="grid-function">
                     <div class="grid-function-1">
                         <div id="oneOne" class="grid-function-2"></div>
-                        <div class="grid-function-2">hey2</div>
-                        <div class="grid-function-2">hey3</div>
+                        <div id="twoTwo" class="grid-function-2"></div>
+                        <div id="threeThree" class="grid-function-2"></div>
                     </div>
                     <div class="grid-function-1">
-                        <div class="grid-function-2">hey4</div>
-                        <div class="grid-function-2">hey5</div>
-                        <div class="grid-function-2">hey6</div>
+                        <div id="fourFour" class="grid-function-2"></div>
+                        <div id="fiveFive" class="grid-function-2"></div>
+                        <div id="sixSix" class="grid-function-2"></div>
                     </div>
                     <div class="grid-function-1">
-                        <div class="grid-function-2">hey7</div>
-                        <div class="grid-function-2">hey8</div>0
-                        <div class="grid-function-2">hey9</div>
+                        <div id="sevenSeven" class="grid-function-2"></div>
+                        <div id="eightEight" class="grid-function-2"></div>
+                        <div id="nineNine" class="grid-function-2"></div>
                     </div>
                 </div>
             </center>

@@ -51,14 +51,12 @@
 .grid-function-1 {
     display: grid;
     grid-template-columns: 110px 110px 110px;
-    color: white;
     margin: 5px;
     width: 210px;
 }
 
 .grid-function-2 {
     margin: 0 5px;
-    background-color: black;
 }
 
 /*Config Settings*/
