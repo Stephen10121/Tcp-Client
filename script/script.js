@@ -73,10 +73,9 @@ function addFunc() {
     var funcName = document.getElementById("funcName").value;
     var funcId = document.getElementById("funcId").value;
     addFuncCookie(funcName, funcId);
-    //document.getElementById('oneOne').innerHTML = '<input type="submit" id="'+funcId+'" value="'+funcName+'"/>';
-    //window.location.replace("function.php");
 }
 
+//Everytime Function is introduced
 function addFuncCookie(name, id) {
     if (Cookies.get('oneOne') != null) {
         if(Cookies.get('twoTwo') != null) {
@@ -145,6 +144,7 @@ function addFuncCookie(name, id) {
     loadFuncCookie();
 }
 
+// Loading the functions.
 function loadFuncCookie() {
     if (Cookies.get('oneOne') != null) {
         document.getElementById('oneOne').innerHTML = '<input type="submit" id="'+Cookies.get('oneOneId')+'" value="'+Cookies.get('oneOneName')+'"/>';
@@ -175,6 +175,7 @@ function loadFuncCookie() {
     }
 }
 
+//Testing
 document.getElementById("oneOne").onclick = function() {
     bro(Cookies.get("oneOneId"));
 };
