@@ -43,6 +43,11 @@
     text-align: center;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 .grid-function {
     display: grid;
     grid-template-rows: 110px 110px 110px;
@@ -50,13 +55,12 @@
 
 .grid-function-1 {
     display: grid;
-    grid-template-columns: 110px 110px 110px;
+    grid-template-columns: 200px 200px 200px;
     margin: 5px;
-    width: 210px;
+    /*width: 210px;*/
 }
 
 .grid-function-2 {
-    margin: 0 5px;
 }
 
 /*Config Settings*/

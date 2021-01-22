@@ -11,9 +11,13 @@ require_once 'header.php';
                 ?>
                 <form action="javascript: addFunc()">
                     <input type="text" placeholder="New Func Name" id="funcName"/>
+                    <input type="text" placeholder="Toggled Func Name" id="togFuncName"/>
                     <input type="text" placeholder="Funcion Id Send" id="funcId"/>
+                    <input type="text" placeholder="Funcion Id Send Toggled" id="funcIdTog"/>
                     <input type="submit" value="Make Function"/>
                 </form>
+            </center>
+            <center class="center">
                 <div class="grid-function">
                     <div class="grid-function-1">
                         <div id="oneOne" class="grid-function-2"></div>

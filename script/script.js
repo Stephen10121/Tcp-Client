@@ -65,7 +65,7 @@ function listen(ip, port, message) {
     socket = new WebSocket('ws://'+ip+':'+port);
 
     socket.addEventListener('open', function (event) {
-        socket.send(message);
+        socket.send("test123");
     });
     socket.addEventListener('message', function (event) {
         if (event.data == "password:Access Granted") {
@@ -78,18 +78,21 @@ function listen(ip, port, message) {
         return event.data;
     });
 }
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function addFunc() {
     var funcName = document.getElementById("funcName").value;
+    var togFuncName = document.getElementById("togFuncName").value;
     var funcId = document.getElementById("funcId").value;
-    addFuncCookie(funcName, funcId);
+    var funcIdTog = document.getElementById("funcIdTog").value;
+    addFuncCookie(funcName, togFuncName, funcId, funcIdTog);
 }
 
 //Everytime Function is introduced
-function addFuncCookie(name, id) {
+function addFuncCookie(name, togName, id, idTog) {
     if (Cookies.get('oneOne') != null) {
         if(Cookies.get('twoTwo') != null) {
             if(Cookies.get('threeThree') != null) {
@@ -103,55 +106,73 @@ function addFuncCookie(name, id) {
                                     } else {
                                         Cookies.set('nineNine', "true");
                                         Cookies.set('nineNineName', name);
+                                        Cookies.set('nineNineTogName', togName);
                                         Cookies.set('nineNineId', id);
+                                        Cookies.set('nineNineIdTog', idTog);
                                         console.log("Cookie nine set");
                                     } 
                                 } else { 
                                     Cookies.set('eightEight', "true");
                                     Cookies.set('eightEightName', name);
+                                    Cookies.set('eightEightTogName', togName);
                                     Cookies.set('eightEightId', id);
+                                    Cookies.set('eightEightIdTog', idTog);
                                     console.log("Cookie eight set");
                                 }
                             } else {
                                 Cookies.set('sevenSeven', "true");
                                 Cookies.set('sevenSevenName', name);
+                                Cookies.set('sevenSevenTogName', togName);
                                 Cookies.set('sevenSevenId', id);
+                                Cookies.set('sevenSevenIdTog', idTog);
                                 console.log("Cookie seven set");
                             }
                         } else {
                             Cookies.set('sixSix', "true");
                             Cookies.set('sixSixName', name);
+                            Cookies.set('sixSixTogName', togName);
                             Cookies.set('sixSixId', id);
+                            Cookies.set('sixSixIdTog', idTog);
                             console.log("Cookie six set");
                         }
                     } else {
                         Cookies.set('fiveFive', "true");
                         Cookies.set('fiveFiveName', name);
+                        Cookies.set('fiveFiveTogName', togName);
                         Cookies.set('fiveFiveId', id);
+                        Cookies.set('fiveFiveIdTog', idTog);
                         console.log("Cookie Five set");
                     }
                 } else {
                     Cookies.set('fourFour', "true");
                     Cookies.set('fourFourName', name);
+                    Cookies.set('fourFourTogName', togName);
                     Cookies.set('fourFourId', id);
+                    Cookies.set('fourFourIdTog', idTog);
                     console.log("Cookie four set");
                 }
             } else {
                 Cookies.set('threeThree', "true");
                 Cookies.set('threeThreeName', name);
+                Cookies.set('threeThreeTogName', togName);
                 Cookies.set('threeThreeId', id);
+                Cookies.set('threeThreeIdTog', idTog);
                 console.log("Cookie three set");
             }
         } else {
             Cookies.set('twoTwo', "true");
             Cookies.set('twoTwoName', name);
+            Cookies.set('twoTwoTogName', togName);
             Cookies.set('twoTwoId', id);
+            Cookies.set('twoTwoIdTog', idTog);
             console.log("Cookie two set");
         }
     } else {
         Cookies.set('oneOne', "true");
         Cookies.set('oneOneName', name);
+        Cookies.set('oneOneTogName', togName);
         Cookies.set('oneOneId', id);
+        Cookies.set('oneOneIdTog', idTog);
         console.log("Cookie one set");
     }
     loadFuncCookie();
@@ -189,36 +210,122 @@ function loadFuncCookie() {
 }
 
 //Testing
+var one = 0;
+var two = 0;
+var three = 0;
+var four = 0;
+var five = 0;
+var six = 0;
+var seven = 0;
+var eight = 0;
+var nine = 0;
 document.getElementById("oneOne").onclick = function() {
-    bro(Cookies.get("oneOneId"));
+    if (one == 0){
+        one = 1;
+        document.getElementById(Cookies.get('oneOneId')).value = Cookies.get('oneOneTogName');
+        bro(Cookies.get("oneOneId"));
+    } else {
+        document.getElementById(Cookies.get('oneOneId')).value = Cookies.get('oneOneName');
+        bro(Cookies.get("oneOneIdTog"));
+        one = 0;
+    }
 };
 document.getElementById("twoTwo").onclick = function() {
-    bro(Cookies.get("twoTwoId"));
+    if (two == 0){
+        two = 1;
+        document.getElementById(Cookies.get('twoTwoId')).value = Cookies.get('twoTwoTogName');
+        bro(Cookies.get("twoTwoId"));
+    } else {
+        document.getElementById(Cookies.get('twoTwoId')).value = Cookies.get('twoTwoName');
+        bro(Cookies.get("twoTwoIdTog"));
+        two = 0;
+    }
 };
 document.getElementById("threeThree").onclick = function() {
-    bro(Cookies.get("threeThreeId"));
+    if (three == 0){
+        three = 1;
+        document.getElementById(Cookies.get('threeThreeId')).value = Cookies.get('threeThreeTogName');
+        bro(Cookies.get("threeThreeId"));
+    } else {
+        document.getElementById(Cookies.get('threeThreeId')).value = Cookies.get('threeThreeName');
+        bro(Cookies.get("threeThreeIdTog"));
+        three = 0;
+    }
+    
 };
 document.getElementById("fourFour").onclick = function() {
-    bro(Cookies.get("fourFourId"));
+    if (four == 0){
+        four = 1;
+        document.getElementById(Cookies.get('fourFourId')).value = Cookies.get('fourFourTogName');
+        bro(Cookies.get("fourFourId"));
+    } else {
+        document.getElementById(Cookies.get('fourFourId')).value = Cookies.get('fourFourName');
+        bro(Cookies.get("fourFourIdTog"));
+        four = 0;
+    }
+    
 };
 document.getElementById("fiveFive").onclick = function() {
-    bro(Cookies.get("fiveFiveId"));
+    if (five == 0){
+        five = 1;
+        document.getElementById(Cookies.get('fiveFiveId')).value = Cookies.get('fiveFiveTogName');
+        bro(Cookies.get("fiveFiveId"));
+    } else {
+        document.getElementById(Cookies.get('fiveFiveId')).value = Cookies.get('fiveFiveName');
+        bro(Cookies.get("fiveFiveIdTog"));
+        five = 0;
+    }
+    
 };
 document.getElementById("sixSix").onclick = function() {
-    bro(Cookies.get("sixSixId"));
+    if (six == 0){
+        six = 1;
+        document.getElementById(Cookies.get('sixSixId')).value = Cookies.get('sixSixTogName');
+        bro(Cookies.get("sixSixId"));
+    } else {
+        document.getElementById(Cookies.get('sixSixId')).value = Cookies.get('sixSixName');
+        bro(Cookies.get("sixSixIdTog"));
+        six = 0;
+    }
+    
 };
 document.getElementById("sevenSeven").onclick = function() {
-    bro(Cookies.get("sevenSevenId"));
+    if (seven == 0){
+        seven = 1;
+        document.getElementById(Cookies.get('sevenSevenId')).value = Cookies.get('sevenSevenTogName');
+        bro(Cookies.get("sevenSevenId"));
+    } else {
+        document.getElementById(Cookies.get('sevenSevenId')).value = Cookies.get('sevenSevenName');
+        bro(Cookies.get("sevenSevenIdTog"));
+        seven = 0;
+    }
+    
 };
 document.getElementById("eightEight").onclick = function() {
-    bro(Cookies.get("eightEightId"));
+    if (eight == 0){
+        eight = 1;
+        document.getElementById(Cookies.get('eightEightId')).value = Cookies.get('eightEightTogName');
+        bro(Cookies.get("eightEightId"));
+    } else {
+        document.getElementById(Cookies.get('eightEightId')).value = Cookies.get('eightEightName');
+        bro(Cookies.get("eightEightIdTog"));
+        eight = 0;
+    }
+    
 };
 document.getElementById("nineNine").onclick = function() {
-    bro(Cookies.get("nineNineId"));
+    if (nine == 0){
+        nine = 1;
+        document.getElementById(Cookies.get('nineNineId')).value = Cookies.get('nineNineTogName');
+        bro(Cookies.get("nineNineId"));
+    } else {
+        document.getElementById(Cookies.get('nineNineId')).value = Cookies.get('nineNineName');
+        bro(Cookies.get("nineNineIdTog"));
+        nine = 0;
+    }
+    
 };
 
 function bro(what) {
-    //console.log(what);
-    what = what.toString()
-    sendMsgFinal("192.168.0.43", 5000, "test123", what);
+    sendMsgFinal(Cookies.get('ip'), Cookies.get('port'), Cookies.get('password'), what);
 }
